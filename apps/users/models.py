@@ -1,10 +1,24 @@
 from django.contrib.auth.models import Permission, AbstractUser
+from django.db import models
 from django.db.models.signals import post_migrate
 from django.contrib.contenttypes.models import ContentType
+from django.utils.translation import gettext as _
 
 
 class User(AbstractUser):
-    # profile_pic = models.FileField()
+    LANGUAGE_UR = "ur"
+    LANGUAGE_EN = "en"
+    LANGUAGE_CHOICES = [
+        (LANGUAGE_EN, _("English")),
+        (LANGUAGE_UR, _("Urdu"))
+    ]
+
+    language = models.CharField(
+        choices=LANGUAGE_CHOICES,
+        max_length=2,
+        blank=True,
+        default=LANGUAGE_EN
+    )
 
     class Meta:
         verbose_name = 'Owner'

@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 02:25+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/farms/admin.py:63 apps/farms/admin.py:100
+msgid "Total Output"
+msgstr "کل پیداوار"
+
+#: apps/farms/admin.py:73
+msgid "Net Profit"
+msgstr "خالص منافع"
+
+#: apps/farms/apps.py:7 apps/farms/models.py:26
+msgid "Farms"
+msgstr "فارم"
+
+#: apps/farms/models.py:17
+msgid "farm Name"
+msgstr "فارم کا نام"
+
+#: apps/farms/models.py:18
+msgid "Owner"
+msgstr "مالک"
+
+#: apps/farms/models.py:25 apps/farms/models.py:33 apps/farms/models.py:68
+msgid "Farm"
+msgstr "فارم"
+
+#: apps/farms/models.py:34
+msgid "Asset Name"
+msgstr "اثاثہ کا نام"
+
+#: apps/farms/models.py:35
+msgid "Date purchased"
+msgstr "تاریخ خرید"
+
+#: apps/farms/models.py:36
+msgid "Is purchased new"
+msgstr "نیا خریدا"
+
+#: apps/farms/models.py:37
+msgid "Amount in rupees"
+msgstr "رقم"
+
+#: apps/farms/models.py:37
+msgid "Purchase cost"
+msgstr "خریداری لاگت"
+
+#: apps/farms/models.py:47
+msgid "Farm Asset"
+msgstr "فارم اثاثہ"
+
+#: apps/farms/models.py:48
+msgid "Farm Assets"
+msgstr "فارم اثاثے"
+
+#: apps/farms/models.py:52
+msgid "Crop Name"
+msgstr "فصل کا نام"
+
+#: apps/farms/models.py:53
+msgid "Description"
+msgstr "تفصیل"
+
+#: apps/farms/models.py:63 apps/farms/models.py:113
+msgid "Crop type"
+msgstr "فصل کی قسم"
+
+#: apps/farms/models.py:64
+msgid "Crop types"
+msgstr "فصل کی قسمیں"
+
+#: apps/farms/models.py:69
+msgid "Field Name"
+msgstr "فیلڈ کا نام"
+
+#: apps/farms/models.py:70
+msgid "Location"
+msgstr "مقام"
+
+#: apps/farms/models.py:71
+msgid "Is Own Property"
+msgstr "اپنی پراپرٹی ہے?"
+
+#: apps/farms/models.py:72
+msgid "Has Electricity tubewell"
+msgstr "بجلی کا ٹیوب ویل ہے"
+
+#: apps/farms/models.py:73
+msgid "Has Canal Irrigation"
+msgstr "کینال آبپاشی ہے"
+
+#: apps/farms/models.py:74
+msgid "Total Acres"
+msgstr "کل ایکڑ"
+
+#: apps/farms/models.py:78
+msgid "Landlord Name"
+msgstr "مالک کا نام"
+
+#: apps/farms/models.py:78
+msgid "Landlord name if not owned"
+msgstr "مالک نمبر"
+
+#: apps/farms/models.py:80
+msgid "Landlord Number"
+msgstr "مالک نمبر"
+
+#: apps/farms/models.py:80
+msgid "Landlord number if not owned"
+msgstr "مالک نمبر"
+
+#: apps/farms/models.py:82
+msgid "Lease per acre"
+msgstr "ایکڑ پر لیز"
+
+#: apps/farms/models.py:82
+msgid "If leased then theka in thousands"
+msgstr "اگر لیز پر ہے تو رقم"
+
+#: apps/farms/models.py:84
+msgid "Lease start"
+msgstr "لیز اسٹارٹ"
+
+#: apps/farms/models.py:84
+msgid "Lease start date if not owned"
+msgstr "اگر ملکیت نہیں ہے تو لیز شروع ہونے کی تاریخ"
+
+#: apps/farms/models.py:86
+msgid "Lease end"
+msgstr "لیز ختم"
+
+#: apps/farms/models.py:86
+msgid "Lease end date if not owned"
+msgstr "اگر ملکیت نہیں ہے تو لیز کی آخری تاریخ"
+
+#: apps/farms/models.py:88
+msgid "Is Active"
+msgstr "ایکٹو ہے"
+
+#: apps/farms/models.py:88
+msgid "Is lease active"
+msgstr "لیز ایکٹو ہے"
+
+#: apps/farms/models.py:95 apps/farms/models.py:112
+msgid "Field"
+msgstr "کھیت"
+
+#: apps/farms/models.py:96
+msgid "Fields"
+msgstr "کھیتوں"
+
+#: apps/farms/models.py:108
+msgid "Summer"
+msgstr "موسم گرما"
+
+#: apps/farms/models.py:109
+msgid "Winter"
+msgstr "موسم سرما"
+
+#: apps/farms/models.py:110
+msgid "Mid season"
+msgstr "درمیانہ موسم"
+
+#: apps/farms/models.py:114
+msgid "Season"
+msgstr "موسم"
+
+#: apps/farms/models.py:115
+msgid "breed"
+msgstr "نسل"
+
+#: apps/farms/models.py:116
+msgid "Total acres"
+msgstr "کل ایکڑ"
+
+#: apps/farms/models.py:117
+msgid "Date sowing"
+msgstr "تاریخ بوائی"
+
+#: apps/farms/models.py:118
+msgid "Date harvesting"
+msgstr "تاریخ کٹائی"
+
+#: apps/farms/models.py:125 apps/farms/models.py:159 apps/farms/models.py:187
+msgid "Crop"
+msgstr "فصل"
+
+#: apps/farms/models.py:126
+msgid "Crops"
+msgstr "فصلیں"
+
+#: apps/farms/models.py:136
+msgid "Total Expenses"
+msgstr "کل اخراجات"
+
+#: apps/farms/models.py:150
+msgid "Seed"
+msgstr "بیج"
+
+#: apps/farms/models.py:151
+msgid "Fertilizer"
+msgstr "کھاد"
+
+#: apps/farms/models.py:152
+msgid "Pesticides"
+msgstr "کیڑے مار دوا"
+
+#: apps/farms/models.py:153
+msgid "Water"
+msgstr "پانی"
+
+#: apps/farms/models.py:154
+msgid "Electricity_bill"
+msgstr "بجلی کا بل"
+
+#: apps/farms/models.py:155
+msgid "Oil"
+msgstr "تیل"
+
+#: apps/farms/models.py:156
+msgid "Labour"
+msgstr "مزدور"
+
+#: apps/farms/models.py:157
+msgid "Miscellaneous"
+msgstr "متفرق"
+
+#: apps/farms/models.py:163
+msgid "Expense type"
+msgstr "اخراجات کی قسم"
+
+#: apps/farms/models.py:165
+msgid "Expense date"
+msgstr "اخراجات کی تاریخ"
+
+#: apps/farms/models.py:166
+msgid "Amount"
+msgstr "رقم"
+
+#: apps/farms/models.py:167 apps/farms/models.py:191
+msgid "Notes"
+msgstr "نوٹ"
+
+#: apps/farms/models.py:170
+msgid "Expend by"
+msgstr "خرچ کریں"
+
+#: apps/farms/models.py:172
+msgid "Added by"
+msgstr "شامل کیا"
+
+#: apps/farms/models.py:179
+msgid "Expense"
+msgstr "خرچہ"
+
+#: apps/farms/models.py:180
+msgid "Expenses"
+msgstr "اخراجات"
+
+#: apps/farms/models.py:188
+msgid "Total mann weight"
+msgstr "کل من"
+
+#: apps/farms/models.py:188
+msgid "Total mann"
+msgstr "کل من"
+
+#: apps/farms/models.py:189
+msgid "Per mann rate"
+msgstr "فی من شرح"
+
+#: apps/farms/models.py:189
+msgid "Rate per mann"
+msgstr "شرح فی من"
+
+#: apps/farms/models.py:190
+msgid "Sold date"
+msgstr "فروخت کی تاریخ"
+
+#: apps/farms/models.py:198
+msgid "Output"
+msgstr "پیداوار"
+
+#: apps/farms/models.py:199
+msgid "Outputs"
+msgstr "پیداوار"
+
+#: apps/users/admin.py:32
+msgid "Personal info"
+msgstr "ذاتی معلومات"
+
+#: apps/users/admin.py:33
+msgid "Permissions"
+msgstr "اجازت"
+
+#: apps/users/admin.py:36
+msgid "Important dates"
+msgstr "اہم تاریخیں"
+
+#: apps/users/models.py:12 farm_management_system/settings.py:121
+msgid "English"
+msgstr "English"
+
+#: apps/users/models.py:13 farm_management_system/settings.py:122
+msgid "Urdu"
+msgstr "اردو"
