@@ -128,13 +128,6 @@ class Crop(TimeStampedModel):
     def __str__(self):
         return f"{self.crop_type}({self.field})"
 
-    @property
-    def total_expenses(self):
-        expenses = Crop.objects.filter(id=self.id).annotate(total_expense=Sum('crop_expenses__amount')).first()
-        return expenses.total_expense
-
-    total_expenses.fget.short_description = _("Total Expenses")
-
 
 class Expense(TimeStampedModel):
     SEED = "1"
@@ -166,7 +159,7 @@ class Expense(TimeStampedModel):
     amount = models.FloatField(null=False, blank=False, verbose_name=_('Amount'))
     notes = models.TextField(null=True, verbose_name=_('Notes'))
 
-    expend_by = models.ForeignKey(
+    spent_by = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name='expenditures', verbose_name=_('Expend by'))
     added_by = models.ForeignKey(
         User, on_delete=models.PROTECT, related_name='added_expenditures', verbose_name=_('Added by'))

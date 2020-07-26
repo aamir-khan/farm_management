@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from django.db.models import Sum, F
+from django.db.models import F, IntegerField, OuterRef, Subquery, Sum
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 
@@ -8,6 +8,30 @@ from apps.farms.models import Farm, CropType, Field, Crop, FarmAsset, Expense, O
 
 
 from farm_management_system.admin import ReadOnlyModelAdmin
+
+
+class ProfitFilter(admin.SimpleListFilter):
+    title = _('By Profit')
+    parameter_name = 'profit'
+
+    def lookups(self, request, model_admin):
+        return (
+            ('profitable', _('Profitable')),
+            ('loss', _('Loss')),
+            ('balanced', _('Balanced')),
+        )
+
+    def queryset(self, request, queryset):
+        """Return the filtered queryset"""
+
+        if self.value() == 'profitable':
+            return queryset.filter(total_output__gt=F('total_expense'))
+        elif self.value() == 'loss':
+            return queryset.filter(total_output__lt=F('total_expense'))
+        elif self.value() == 'balanced':
+            return queryset.filter(total_output=F('total_expense'))
+        else:
+            return queryset
 
 
 class FarmAdmin(ReadOnlyModelAdmin):
@@ -52,6 +76,8 @@ class CropAdmin(ReadOnlyModelAdmin):
     list_display = ['field', 'crop_type', 'season', 'breed', 'total_acres', 'total_expenses', '_total_output',
                     '_net_profit', 'date_sowing', 'date_harvesting']
 
+    list_filter = ['field', 'crop_type', 'season', 'date_sowing', ProfitFilter]
+
     class Meta:
         model = Crop
 
@@ -59,23 +85,34 @@ class CropAdmin(ReadOnlyModelAdmin):
         queryset = super().get_queryset(request)
         if not request.user.is_superuser:
             queryset = queryset.filter(field__farm__owner=request.user)
-        queryset = queryset.annotate(
+
+        total_output = Crop.objects.filter(pk=OuterRef('pk')).annotate(
             total_output=Sum(
-                F('crop_outputs__total_mann')*F('crop_outputs__rate_per_mann'),
+                F('crop_outputs__total_mann') * F('crop_outputs__rate_per_mann'),
                 output_field=models.FloatField()
             ))
+        total_expense = Crop.objects.filter(pk=OuterRef('pk')).annotate(total_expense=Sum('crop_expenses__amount'))
+
+        queryset = queryset.annotate(
+            total_output=Subquery(total_output.values('total_output'), output_field=IntegerField()),
+            total_expense=Subquery(total_expense.values('total_expense'), output_field=IntegerField())
+        )
         return queryset
 
     def _total_output(self, obj):
         return obj.total_output
     _total_output.short_description = _('Total Output')
 
+    def total_expenses(self, obj):
+        return obj.total_expense
+
+    total_expenses.short_description = _("Total Expenses")
+
     def _net_profit(self, obj):
-        profit = obj.total_output - obj.total_expenses
+        profit = obj.total_output - obj.total_expense
         color = 'red' if profit < 0 else 'green'
         profit = "{:.2f}".format(profit)
         profit = mark_safe(f'<span style="color: {color};">{profit}</span>')
-        print(profit)
         return profit
 
     _net_profit.short_description = _('Net Profit')
@@ -95,7 +132,7 @@ class FarmAssetAdmin(ReadOnlyModelAdmin):
 
 
 class ExpenseAdmin(ReadOnlyModelAdmin):
-    list_display = ['crop', 'expense_type', 'expense_date', 'amount', 'notes', 'expend_by', 'added_by']
+    list_display = ['crop', 'expense_type', 'expense_date', 'amount', 'notes', 'spent_by', 'added_by']
 
     class Meta:
         model = Expense
