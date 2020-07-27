@@ -27,7 +27,7 @@ SECRET_KEY = 'm&lkh*7@ul4^l41u%h6yq!)n7(%sjw@6bk@(cx7*ecm+lr+*xj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['merakhait.com']
 
 AUTH_USER_MODEL = 'users.User'
 
