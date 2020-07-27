@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 02:25+0400\n"
+"POT-Creation-Date: 2020-07-27 01:39+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/farms/admin.py:63 apps/farms/admin.py:100
+#: apps/farms/admin.py:14
+msgid "By Profit"
+msgstr "منافع کے حساب سے"
+
+#: apps/farms/admin.py:19
+msgid "Profitable"
+msgstr "منافع بخش"
+
+#: apps/farms/admin.py:20
+msgid "Loss"
+msgstr "نقصان دہ"
+
+#: apps/farms/admin.py:21
+msgid "Balanced"
+msgstr "متوازن"
+
+#: apps/farms/admin.py:104 apps/farms/admin.py:162
 msgid "Total Output"
 msgstr "کل پیداوار"
 
-#: apps/farms/admin.py:73
+#: apps/farms/admin.py:109
+msgid "Total Expenses"
+msgstr "کل اخراجات"
+
+#: apps/farms/admin.py:118
 msgid "Net Profit"
 msgstr "خالص منافع"
 
@@ -163,7 +183,7 @@ msgstr "کھیت"
 
 #: apps/farms/models.py:96
 msgid "Fields"
-msgstr "کھیتوں"
+msgstr "کھیت"
 
 #: apps/farms/models.py:108
 msgid "Summer"
@@ -197,7 +217,7 @@ msgstr "تاریخ بوائی"
 msgid "Date harvesting"
 msgstr "تاریخ کٹائی"
 
-#: apps/farms/models.py:125 apps/farms/models.py:159 apps/farms/models.py:187
+#: apps/farms/models.py:125 apps/farms/models.py:152 apps/farms/models.py:180
 msgid "Crop"
 msgstr "فصل"
 
@@ -205,99 +225,95 @@ msgstr "فصل"
 msgid "Crops"
 msgstr "فصلیں"
 
-#: apps/farms/models.py:136
-msgid "Total Expenses"
-msgstr "کل اخراجات"
-
-#: apps/farms/models.py:150
+#: apps/farms/models.py:143
 msgid "Seed"
 msgstr "بیج"
 
-#: apps/farms/models.py:151
+#: apps/farms/models.py:144
 msgid "Fertilizer"
 msgstr "کھاد"
 
-#: apps/farms/models.py:152
+#: apps/farms/models.py:145
 msgid "Pesticides"
 msgstr "کیڑے مار دوا"
 
-#: apps/farms/models.py:153
+#: apps/farms/models.py:146
 msgid "Water"
 msgstr "پانی"
 
-#: apps/farms/models.py:154
+#: apps/farms/models.py:147
 msgid "Electricity_bill"
 msgstr "بجلی کا بل"
 
-#: apps/farms/models.py:155
+#: apps/farms/models.py:148
 msgid "Oil"
 msgstr "تیل"
 
-#: apps/farms/models.py:156
+#: apps/farms/models.py:149
 msgid "Labour"
 msgstr "مزدور"
 
-#: apps/farms/models.py:157
+#: apps/farms/models.py:150
 msgid "Miscellaneous"
 msgstr "متفرق"
 
-#: apps/farms/models.py:163
+#: apps/farms/models.py:156
 msgid "Expense type"
 msgstr "اخراجات کی قسم"
 
-#: apps/farms/models.py:165
+#: apps/farms/models.py:158
 msgid "Expense date"
 msgstr "اخراجات کی تاریخ"
 
-#: apps/farms/models.py:166
+#: apps/farms/models.py:159
 msgid "Amount"
 msgstr "رقم"
 
-#: apps/farms/models.py:167 apps/farms/models.py:191
+#: apps/farms/models.py:160 apps/farms/models.py:184
 msgid "Notes"
 msgstr "نوٹ"
 
-#: apps/farms/models.py:170
+#: apps/farms/models.py:163
 msgid "Expend by"
 msgstr "خرچ کریں"
 
-#: apps/farms/models.py:172
+#: apps/farms/models.py:165
 msgid "Added by"
 msgstr "شامل کیا"
 
-#: apps/farms/models.py:179
+#: apps/farms/models.py:172
 msgid "Expense"
 msgstr "خرچہ"
 
-#: apps/farms/models.py:180
+#: apps/farms/models.py:173
 msgid "Expenses"
 msgstr "اخراجات"
 
-#: apps/farms/models.py:188
+#: apps/farms/models.py:181
 msgid "Total mann weight"
 msgstr "کل من"
 
-#: apps/farms/models.py:188
+#: apps/farms/models.py:181
 msgid "Total mann"
 msgstr "کل من"
 
-#: apps/farms/models.py:189
+#: apps/farms/models.py:182
 msgid "Per mann rate"
 msgstr "فی من شرح"
 
-#: apps/farms/models.py:189
+#: apps/farms/models.py:182
 msgid "Rate per mann"
 msgstr "شرح فی من"
 
-#: apps/farms/models.py:190
+#: apps/farms/models.py:183
 msgid "Sold date"
 msgstr "فروخت کی تاریخ"
 
-#: apps/farms/models.py:198
+#: apps/farms/models.py:191
 msgid "Output"
 msgstr "پیداوار"
 
-#: apps/farms/models.py:199
+#: apps/farms/models.py:192
 msgid "Outputs"
 msgstr "پیداوار"
 
@@ -313,10 +329,18 @@ msgstr "اجازت"
 msgid "Important dates"
 msgstr "اہم تاریخیں"
 
-#: apps/users/models.py:12 farm_management_system/settings.py:121
+#: apps/users/models.py:12 farm_management_system/settings.py:122
 msgid "English"
 msgstr "English"
 
-#: apps/users/models.py:13 farm_management_system/settings.py:122
+#: apps/users/models.py:13 farm_management_system/settings.py:123
 msgid "Urdu"
 msgstr "اردو"
+
+#: farm_management_system/urls.py:20
+msgid "Farm management system"
+msgstr "زراعت فارم کے انتظام کا نظام"
+
+#: farm_management_system/urls.py:21
+msgid "My Farm"
+msgstr "میرا فارم"

@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.db import models
 from django.db.models import F, IntegerField, OuterRef, Subquery, Sum
+from django.db.models.functions import Coalesce
+from django.urls import reverse
+from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
 
@@ -73,10 +76,12 @@ class FieldAdmin(ReadOnlyModelAdmin):
 
 
 class CropAdmin(ReadOnlyModelAdmin):
-    list_display = ['field', 'crop_type', 'season', 'breed', 'total_acres', 'total_expenses', '_total_output',
+    list_display = ['id', 'field', 'crop_type', 'season', 'breed', 'total_acres', 'total_expenses', '_total_output',
                     '_net_profit', 'date_sowing', 'date_harvesting']
 
     list_filter = ['field', 'crop_type', 'season', 'date_sowing', ProfitFilter]
+
+    ordering = ('-date_sowing', )
 
     class Meta:
         model = Crop
@@ -94,17 +99,21 @@ class CropAdmin(ReadOnlyModelAdmin):
         total_expense = Crop.objects.filter(pk=OuterRef('pk')).annotate(total_expense=Sum('crop_expenses__amount'))
 
         queryset = queryset.annotate(
-            total_output=Subquery(total_output.values('total_output'), output_field=IntegerField()),
-            total_expense=Subquery(total_expense.values('total_expense'), output_field=IntegerField())
+            total_output=Coalesce(Subquery(total_output.values('total_output'), output_field=IntegerField()), 0),
+            total_expense=Coalesce(Subquery(total_expense.values('total_expense'), output_field=IntegerField()), 0)
         )
         return queryset
 
     def _total_output(self, obj):
-        return obj.total_output
+        url = reverse(f'admin:farms_output_changelist')
+        url += f'?crop__id__exact={obj.id}'
+        return format_html('<a href="{}" target="_blank">{}</a>', url, obj.total_output)
     _total_output.short_description = _('Total Output')
 
     def total_expenses(self, obj):
-        return obj.total_expense
+        url = reverse(f'admin:farms_expense_changelist')
+        url += f'?crop__id__exact={obj.id}'
+        return format_html('<a href="{}" target="_blank">{}</a>', url, obj.total_expense)
 
     total_expenses.short_description = _("Total Expenses")
 
@@ -133,6 +142,8 @@ class FarmAssetAdmin(ReadOnlyModelAdmin):
 
 class ExpenseAdmin(ReadOnlyModelAdmin):
     list_display = ['crop', 'expense_type', 'expense_date', 'amount', 'notes', 'spent_by', 'added_by']
+
+    list_filter = ['crop', 'spent_by', 'expense_type']
 
     class Meta:
         model = Expense

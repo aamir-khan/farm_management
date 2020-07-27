@@ -115,7 +115,7 @@ class Crop(TimeStampedModel):
     breed = models.CharField(max_length=550, verbose_name=_('breed'))
     total_acres = models.FloatField(verbose_name=_('Total acres'))
     date_sowing = models.DateField(verbose_name=_('Date sowing'))
-    date_harvesting = models.DateField(blank=True, verbose_name=_('Date harvesting'))
+    date_harvesting = models.DateField(blank=True, verbose_name=_('Date harvesting'), null=True)
 
     class Meta:
         permissions = (
