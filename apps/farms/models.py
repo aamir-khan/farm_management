@@ -173,7 +173,7 @@ class Expense(TimeStampedModel):
         verbose_name_plural = _('Expenses')
 
     def __str__(self):
-        return f"Rs. {self.amount}->{self.crop}({self.expense_type}) by {self.expend_by}"
+        return f"Rs. {self.amount}->{self.crop}({self.expense_type}) by {self.spent_by}"
 
 
 class Output(TimeStampedModel):
