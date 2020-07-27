@@ -137,6 +137,7 @@ class Expense(TimeStampedModel):
     ELECTRICITY_BILL = "5"
     OIL = "6"
     LABOUR = "7"
+    LEASE = "9"
     MISC = "8"
 
     EXPENSE_TYPE_CHOICES = (
@@ -147,6 +148,7 @@ class Expense(TimeStampedModel):
         (ELECTRICITY_BILL, _('Electricity_bill')),
         (OIL, _('Oil')),
         (LABOUR, _('Labour')),
+        (LEASE, _('Lease')),
         (MISC, _('Miscellaneous')),
     )
     crop = models.ForeignKey(Crop, on_delete=models.PROTECT, verbose_name=_('Crop'), related_name='crop_expenses')

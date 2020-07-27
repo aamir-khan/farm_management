@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 01:39+0400\n"
+"POT-Creation-Date: 2020-07-27 19:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/farms/admin.py:14
+#: apps/farms/admin.py:17
 msgid "By Profit"
 msgstr "منافع کے حساب سے"
 
-#: apps/farms/admin.py:19
+#: apps/farms/admin.py:22
 msgid "Profitable"
 msgstr "منافع بخش"
 
-#: apps/farms/admin.py:20
+#: apps/farms/admin.py:23
 msgid "Loss"
 msgstr "نقصان دہ"
 
-#: apps/farms/admin.py:21
+#: apps/farms/admin.py:24
 msgid "Balanced"
 msgstr "متوازن"
 
-#: apps/farms/admin.py:104 apps/farms/admin.py:162
+#: apps/farms/admin.py:111 apps/farms/admin.py:173
 msgid "Total Output"
 msgstr "کل پیداوار"
 
-#: apps/farms/admin.py:109
+#: apps/farms/admin.py:118
 msgid "Total Expenses"
 msgstr "کل اخراجات"
 
-#: apps/farms/admin.py:118
+#: apps/farms/admin.py:127
 msgid "Net Profit"
 msgstr "خالص منافع"
 
@@ -134,7 +134,7 @@ msgid "Landlord Name"
 msgstr "مالک کا نام"
 
 #: apps/farms/models.py:78
-msgid "Landlord name if not owned"
+msgid "Landlord name if not owned."
 msgstr "مالک نمبر"
 
 #: apps/farms/models.py:80
@@ -142,32 +142,32 @@ msgid "Landlord Number"
 msgstr "مالک نمبر"
 
 #: apps/farms/models.py:80
-msgid "Landlord number if not owned"
+msgid "Landlord number if not owned."
 msgstr "مالک نمبر"
 
 #: apps/farms/models.py:82
 msgid "Lease per acre"
-msgstr "ایکڑ پر لیز"
+msgstr "فی ایکڑ مستاجری"
 
 #: apps/farms/models.py:82
-msgid "If leased then theka in thousands"
-msgstr "اگر لیز پر ہے تو رقم"
+msgid "If leased then lease amount."
+msgstr "اگر مستاجری پر ہے تو رقم"
 
 #: apps/farms/models.py:84
 msgid "Lease start"
-msgstr "لیز اسٹارٹ"
+msgstr "مستاجری شروع"
 
 #: apps/farms/models.py:84
-msgid "Lease start date if not owned"
-msgstr "اگر ملکیت نہیں ہے تو لیز شروع ہونے کی تاریخ"
+msgid "Lease start date if not owned."
+msgstr "اگر ملکیت نہیں ہے تو مستاجری شروع ہونے کی تاریخ"
 
 #: apps/farms/models.py:86
 msgid "Lease end"
-msgstr "لیز ختم"
+msgstr "مستاجری ختم"
 
 #: apps/farms/models.py:86
-msgid "Lease end date if not owned"
-msgstr "اگر ملکیت نہیں ہے تو لیز کی آخری تاریخ"
+msgid "Lease end date if not owned."
+msgstr "اگر ملکیت نہیں ہے تو مستاجری کی آخری تاریخ"
 
 #: apps/farms/models.py:88
 msgid "Is Active"
@@ -175,7 +175,7 @@ msgstr "ایکٹو ہے"
 
 #: apps/farms/models.py:88
 msgid "Is lease active"
-msgstr "لیز ایکٹو ہے"
+msgstr "مستاجری ایکٹو ہے"
 
 #: apps/farms/models.py:95 apps/farms/models.py:112
 msgid "Field"
@@ -217,7 +217,7 @@ msgstr "تاریخ بوائی"
 msgid "Date harvesting"
 msgstr "تاریخ کٹائی"
 
-#: apps/farms/models.py:125 apps/farms/models.py:152 apps/farms/models.py:180
+#: apps/farms/models.py:125 apps/farms/models.py:154 apps/farms/models.py:182
 msgid "Crop"
 msgstr "فصل"
 
@@ -225,95 +225,99 @@ msgstr "فصل"
 msgid "Crops"
 msgstr "فصلیں"
 
-#: apps/farms/models.py:143
+#: apps/farms/models.py:144
 msgid "Seed"
 msgstr "بیج"
 
-#: apps/farms/models.py:144
+#: apps/farms/models.py:145
 msgid "Fertilizer"
 msgstr "کھاد"
 
-#: apps/farms/models.py:145
+#: apps/farms/models.py:146
 msgid "Pesticides"
 msgstr "کیڑے مار دوا"
 
-#: apps/farms/models.py:146
+#: apps/farms/models.py:147
 msgid "Water"
 msgstr "پانی"
 
-#: apps/farms/models.py:147
+#: apps/farms/models.py:148
 msgid "Electricity_bill"
 msgstr "بجلی کا بل"
 
-#: apps/farms/models.py:148
+#: apps/farms/models.py:149
 msgid "Oil"
 msgstr "تیل"
 
-#: apps/farms/models.py:149
+#: apps/farms/models.py:150
 msgid "Labour"
 msgstr "مزدور"
 
-#: apps/farms/models.py:150
+#: apps/farms/models.py:151
+msgid "Lease"
+msgstr "مستاجری"
+
+#: apps/farms/models.py:152
 msgid "Miscellaneous"
 msgstr "متفرق"
 
-#: apps/farms/models.py:156
+#: apps/farms/models.py:158
 msgid "Expense type"
 msgstr "اخراجات کی قسم"
 
-#: apps/farms/models.py:158
+#: apps/farms/models.py:160
 msgid "Expense date"
 msgstr "اخراجات کی تاریخ"
 
-#: apps/farms/models.py:159
+#: apps/farms/models.py:161
 msgid "Amount"
 msgstr "رقم"
 
-#: apps/farms/models.py:160 apps/farms/models.py:184
+#: apps/farms/models.py:162 apps/farms/models.py:186
 msgid "Notes"
 msgstr "نوٹ"
 
-#: apps/farms/models.py:163
+#: apps/farms/models.py:165
 msgid "Expend by"
 msgstr "خرچ کریں"
 
-#: apps/farms/models.py:165
+#: apps/farms/models.py:167
 msgid "Added by"
 msgstr "شامل کیا"
 
-#: apps/farms/models.py:172
+#: apps/farms/models.py:174
 msgid "Expense"
 msgstr "خرچہ"
 
-#: apps/farms/models.py:173
+#: apps/farms/models.py:175
 msgid "Expenses"
 msgstr "اخراجات"
 
-#: apps/farms/models.py:181
+#: apps/farms/models.py:183
 msgid "Total mann weight"
 msgstr "کل من"
 
-#: apps/farms/models.py:181
+#: apps/farms/models.py:183
 msgid "Total mann"
 msgstr "کل من"
 
-#: apps/farms/models.py:182
+#: apps/farms/models.py:184
 msgid "Per mann rate"
 msgstr "فی من شرح"
 
-#: apps/farms/models.py:182
+#: apps/farms/models.py:184
 msgid "Rate per mann"
 msgstr "شرح فی من"
 
-#: apps/farms/models.py:183
+#: apps/farms/models.py:185
 msgid "Sold date"
 msgstr "فروخت کی تاریخ"
 
-#: apps/farms/models.py:191
+#: apps/farms/models.py:193
 msgid "Output"
 msgstr "پیداوار"
 
-#: apps/farms/models.py:192
+#: apps/farms/models.py:194
 msgid "Outputs"
 msgstr "پیداوار"
 
@@ -329,18 +333,18 @@ msgstr "اجازت"
 msgid "Important dates"
 msgstr "اہم تاریخیں"
 
-#: apps/users/models.py:12 farm_management_system/settings.py:122
+#: apps/users/models.py:12 farm_management_system/settings.py:127
 msgid "English"
 msgstr "English"
 
-#: apps/users/models.py:13 farm_management_system/settings.py:123
+#: apps/users/models.py:13 farm_management_system/settings.py:128
 msgid "Urdu"
 msgstr "اردو"
 
-#: farm_management_system/urls.py:20
+#: farm_management_system/urls.py:23
 msgid "Farm management system"
 msgstr "زراعت فارم کے انتظام کا نظام"
 
-#: farm_management_system/urls.py:21
+#: farm_management_system/urls.py:24
 msgid "My Farm"
 msgstr "میرا فارم"
