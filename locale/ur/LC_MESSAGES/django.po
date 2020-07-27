@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 19:54+0000\n"
+"POT-Creation-Date: 2020-07-27 20:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,17 +33,29 @@ msgstr "نقصان دہ"
 msgid "Balanced"
 msgstr "متوازن"
 
-#: apps/farms/admin.py:111 apps/farms/admin.py:173
+#: apps/farms/admin.py:112 apps/farms/admin.py:197
 msgid "Total Output"
 msgstr "کل پیداوار"
 
-#: apps/farms/admin.py:118
+#: apps/farms/admin.py:119
 msgid "Total Expenses"
 msgstr "کل اخراجات"
 
-#: apps/farms/admin.py:127
+#: apps/farms/admin.py:128
 msgid "Net Profit"
 msgstr "خالص منافع"
+
+#: apps/farms/admin.py:135
+msgid "Expenses per acre"
+msgstr "فی ایکڑ اخراجات"
+
+#: apps/farms/admin.py:142
+msgid "Output per acre"
+msgstr "فی ایکڑ پیداوار"
+
+#: apps/farms/admin.py:151
+msgid "Profit per acre"
+msgstr "فی ایکڑ منافع"
 
 #: apps/farms/apps.py:7 apps/farms/models.py:26
 msgid "Farms"
