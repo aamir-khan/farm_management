@@ -179,7 +179,7 @@ msgstr "مستاجری ایکٹو ہے"
 
 #: apps/farms/models.py:95 apps/farms/models.py:112
 msgid "Field"
-msgstr "کھیت"
+msgstr "کھوہ/کھیت"
 
 #: apps/farms/models.py:96
 msgid "Fields"
