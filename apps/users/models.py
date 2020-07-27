@@ -2,7 +2,7 @@ from django.contrib.auth.models import Permission, AbstractUser
 from django.db import models
 from django.db.models.signals import post_migrate
 from django.contrib.contenttypes.models import ContentType
-from django.utils.translation import gettext as _
+from django.utils.translation import ugettext_lazy as _
 
 
 class User(AbstractUser):
@@ -21,8 +21,8 @@ class User(AbstractUser):
     )
 
     class Meta:
-        verbose_name = 'Owner'
-        verbose_name_plural = 'Owners'
+        verbose_name = _("Owner")
+        verbose_name_plural = _("Owners")
         permissions = (
             ('can_view_userProfile', 'Can View UserProfile'),
         )

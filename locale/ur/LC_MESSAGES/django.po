@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 23:25+0000\n"
+"POT-Creation-Date: 2020-07-27 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr "فارم"
 msgid "farm Name"
 msgstr "فارم کا نام"
 
-#: apps/farms/models.py:18
+#: apps/farms/models.py:18 apps/users/models.py:24
 msgid "Owner"
 msgstr "مالک"
 
@@ -346,15 +346,15 @@ msgstr "جن کے دینے ہیں"
 msgid "More credit"
 msgstr "جن سے لینے ہیں"
 
-#: apps/ledgers/admin.py:121
+#: apps/ledgers/admin.py:122
 msgid "Total Debt"
 msgstr "کل قرض"
 
-#: apps/ledgers/admin.py:128
+#: apps/ledgers/admin.py:129
 msgid "Total Credit"
 msgstr "کل جمع"
 
-#: apps/ledgers/admin.py:136
+#: apps/ledgers/admin.py:137
 msgid "Net Balance"
 msgstr "کل حساب"
 
@@ -409,6 +409,26 @@ msgstr "اجازت"
 #: apps/users/admin.py:36
 msgid "Important dates"
 msgstr "اہم تاریخیں"
+
+#: apps/users/apps.py:7 apps/users/models.py:25
+msgid "Owners"
+msgstr "مالک"
+
+#: apps/users/django_standard_messages.py:5
+msgid "Recent actions"
+msgstr "حالیہ اقدامات"
+
+#: apps/users/django_standard_messages.py:6
+msgid "My actions"
+msgstr "میرے عمل"
+
+#: apps/users/django_standard_messages.py:7
+msgid "VIEW SITE"
+msgstr "سائٹ دیکھیں"
+
+#: apps/users/django_standard_messages.py:8
+msgid "View site"
+msgstr "سائٹ دیکھیں"
 
 #: apps/users/models.py:12 farm_management_system/settings.py:127
 msgid "English"
