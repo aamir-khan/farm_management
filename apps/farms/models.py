@@ -79,7 +79,7 @@ class Field(TimeStampedModel):
     landlord_number = models.CharField(
         verbose_name=_('Landlord Number'), help_text=_('Landlord number if not owned'), blank=True, max_length=550)
     lease_per_acre = models.FloatField(
-        verbose_name=_('Lease per acre'), help_text=_('If leased then theka in thousands'), blank=True, null=True)
+        verbose_name=_('Lease per acre'), help_text=_('If leased then lease amount'), blank=True, null=True)
     lease_start = models.DateField(
         blank=True, verbose_name=_('Lease start'), help_text=_('Lease start date if not owned'), null=True)
     lease_end = models.DateField(
