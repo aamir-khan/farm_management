@@ -77,7 +77,8 @@ class FieldAdmin(ReadOnlyModelAdmin):
 
 class CropAdmin(ReadOnlyModelAdmin):
     list_display = ['id', 'field', 'crop_type', 'season', 'breed', 'total_acres', 'total_expenses', '_total_output',
-                    '_net_profit', 'date_sowing', 'date_harvesting']
+                    '_net_profit', '_expense_per_acre', '_output_per_acre', '_net_profit_per_acre', 'date_sowing',
+                    'date_harvesting']
 
     list_filter = ['field', 'crop_type', 'season', 'date_sowing', ProfitFilter]
 
@@ -125,6 +126,29 @@ class CropAdmin(ReadOnlyModelAdmin):
         return profit
 
     _net_profit.short_description = _('Net Profit')
+
+    def _expense_per_acre(self, obj):
+        per_acre_expenses = obj.total_expense / obj.total_acres
+        per_acre_expenses = "{:.2f}".format(per_acre_expenses)
+        return per_acre_expenses
+
+    _expense_per_acre.short_description = _("Expenses per acre")
+
+    def _output_per_acre(self, obj):
+        per_acre_output = obj.total_output / obj.total_acres
+        per_acre_output = "{:.2f}".format(per_acre_output)
+        return per_acre_output
+
+    _output_per_acre.short_description = _("Output per acre")
+
+    def _net_profit_per_acre(self, obj):
+        profit = (obj.total_output - obj.total_expense) / obj.total_acres
+        color = 'red' if profit < 0 else 'green'
+        profit = "{:.2f}".format(profit)
+        profit = mark_safe(f'<span style="color: {color};">{profit}</span>')
+        return profit
+
+    _net_profit_per_acre.short_description = _('Profit per acre')
 
 
 class FarmAssetAdmin(ReadOnlyModelAdmin):
