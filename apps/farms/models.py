@@ -75,15 +75,15 @@ class Field(TimeStampedModel):
 
     # If not the owner if the field
     landlord_name = models.CharField(
-        verbose_name=_('Landlord Name'), help_text=_('Landlord name if not owned'), blank=True, max_length=550)
+        verbose_name=_('Landlord Name'), help_text=_('Landlord name if not owned.'), blank=True, max_length=550)
     landlord_number = models.CharField(
-        verbose_name=_('Landlord Number'), help_text=_('Landlord number if not owned'), blank=True, max_length=550)
+        verbose_name=_('Landlord Number'), help_text=_('Landlord number if not owned.'), blank=True, max_length=550)
     lease_per_acre = models.FloatField(
-        verbose_name=_('Lease per acre'), help_text=_('If leased then lease amount'), blank=True, null=True)
+        verbose_name=_('Lease per acre'), help_text=_('If leased then lease amount.'), blank=True, null=True)
     lease_start = models.DateField(
-        blank=True, verbose_name=_('Lease start'), help_text=_('Lease start date if not owned'), null=True)
+        blank=True, verbose_name=_('Lease start'), help_text=_('Lease start date if not owned.'), null=True)
     lease_end = models.DateField(
-        blank=True, verbose_name=_('Lease end'), help_text=_('Lease end date if not owned'), null=True
+        blank=True, verbose_name=_('Lease end'), help_text=_('Lease end date if not owned.'), null=True
     )
     is_active = models.BooleanField(default=True, verbose_name=_('Is Active'), help_text=_('Is lease active'))
 
