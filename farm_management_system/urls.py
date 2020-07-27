@@ -24,7 +24,7 @@ admin.site.site_header = _('Farm management system')
 admin.site.site_title = _('My Farm')
 
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
 
 ] + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT
