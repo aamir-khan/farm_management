@@ -1,5 +1,5 @@
+from django.core.validators import MinValueValidator
 from django.db import models
-from django.db.models import Sum
 from django.utils.translation import ugettext_lazy as _
 
 from apps.users.models import User
@@ -180,8 +180,10 @@ class Expense(TimeStampedModel):
 
 class Output(TimeStampedModel):
     crop = models.ForeignKey(Crop, on_delete=models.PROTECT, verbose_name=_('Crop'), related_name='crop_outputs')
-    total_mann = models.FloatField(help_text=_('Total mann weight'), verbose_name=_('Total mann'))
-    rate_per_mann = models.IntegerField(help_text=_('Per mann rate'), verbose_name=_('Rate per mann'))
+    total_mann = models.FloatField(
+        help_text=_('Total mann weight'), verbose_name=_('Total mann'), validators=[MinValueValidator(0.1)])
+    rate_per_mann = models.IntegerField(
+        help_text=_('Per mann rate'), verbose_name=_('Rate per mann'), validators=[MinValueValidator(1)])
     sold_date = models.DateField(verbose_name=_('Sold date'))
     notes = models.CharField(max_length=550, null=True, blank=True, verbose_name=_('Notes'))
 

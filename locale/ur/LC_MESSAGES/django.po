@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 20:55+0000\n"
+"POT-Creation-Date: 2020-07-27 23:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr "منافع بخش"
 msgid "Loss"
 msgstr "نقصان دہ"
 
-#: apps/farms/admin.py:24
+#: apps/farms/admin.py:24 apps/ledgers/admin.py:23
 msgid "Balanced"
 msgstr "متوازن"
 
@@ -70,6 +70,7 @@ msgid "Owner"
 msgstr "مالک"
 
 #: apps/farms/models.py:25 apps/farms/models.py:33 apps/farms/models.py:68
+#: apps/ledgers/models.py:10
 msgid "Farm"
 msgstr "فارم"
 
@@ -105,7 +106,7 @@ msgstr "فارم اثاثے"
 msgid "Crop Name"
 msgstr "فصل کا نام"
 
-#: apps/farms/models.py:53
+#: apps/farms/models.py:53 apps/ledgers/models.py:12
 msgid "Description"
 msgstr "تفصیل"
 
@@ -121,7 +122,7 @@ msgstr "فصل کی قسمیں"
 msgid "Field Name"
 msgstr "فیلڈ کا نام"
 
-#: apps/farms/models.py:70
+#: apps/farms/models.py:70 apps/ledgers/models.py:14
 msgid "Location"
 msgstr "مقام"
 
@@ -181,7 +182,7 @@ msgstr "مستاجری ختم"
 msgid "Lease end date if not owned."
 msgstr "اگر ملکیت نہیں ہے تو مستاجری کی آخری تاریخ"
 
-#: apps/farms/models.py:88
+#: apps/farms/models.py:88 apps/ledgers/models.py:15
 msgid "Is Active"
 msgstr "ایکٹو ہے"
 
@@ -281,11 +282,11 @@ msgstr "اخراجات کی قسم"
 msgid "Expense date"
 msgstr "اخراجات کی تاریخ"
 
-#: apps/farms/models.py:161
+#: apps/farms/models.py:161 apps/ledgers/models.py:36
 msgid "Amount"
 msgstr "رقم"
 
-#: apps/farms/models.py:162 apps/farms/models.py:186
+#: apps/farms/models.py:162 apps/farms/models.py:188 apps/ledgers/models.py:38
 msgid "Notes"
 msgstr "نوٹ"
 
@@ -305,33 +306,97 @@ msgstr "خرچہ"
 msgid "Expenses"
 msgstr "اخراجات"
 
-#: apps/farms/models.py:183
+#: apps/farms/models.py:184
 msgid "Total mann weight"
 msgstr "کل من"
 
-#: apps/farms/models.py:183
+#: apps/farms/models.py:184
 msgid "Total mann"
 msgstr "کل من"
 
-#: apps/farms/models.py:184
+#: apps/farms/models.py:186
 msgid "Per mann rate"
 msgstr "فی من شرح"
 
-#: apps/farms/models.py:184
+#: apps/farms/models.py:186
 msgid "Rate per mann"
 msgstr "شرح فی من"
 
-#: apps/farms/models.py:185
+#: apps/farms/models.py:187
 msgid "Sold date"
 msgstr "فروخت کی تاریخ"
 
-#: apps/farms/models.py:193
+#: apps/farms/models.py:195
 msgid "Output"
 msgstr "پیداوار"
 
-#: apps/farms/models.py:194
+#: apps/farms/models.py:196
 msgid "Outputs"
 msgstr "پیداوار"
+
+#: apps/ledgers/admin.py:16
+msgid "By Balance"
+msgstr "بقیہ"
+
+#: apps/ledgers/admin.py:21
+msgid "More Debt"
+msgstr "جن کے دینے ہیں"
+
+#: apps/ledgers/admin.py:22
+msgid "More credit"
+msgstr "جن سے لینے ہیں"
+
+#: apps/ledgers/admin.py:121
+msgid "Total Debt"
+msgstr "کل قرض"
+
+#: apps/ledgers/admin.py:128
+msgid "Total Credit"
+msgstr "کل جمع"
+
+#: apps/ledgers/admin.py:136
+msgid "Net Balance"
+msgstr "کل حساب"
+
+#: apps/ledgers/apps.py:7 apps/ledgers/models.py:22
+msgid "Ledgers"
+msgstr "کھاتے"
+
+#: apps/ledgers/models.py:11
+msgid "Name"
+msgstr "نام"
+
+#: apps/ledgers/models.py:13
+msgid "Contact number"
+msgstr "رابطہ نمبر"
+
+#: apps/ledgers/models.py:21 apps/ledgers/models.py:34
+msgid "Ledger"
+msgstr "کھاتہ"
+
+#: apps/ledgers/models.py:30
+msgid "Debit"
+msgstr "قرضہ"
+
+#: apps/ledgers/models.py:31
+msgid "Credit"
+msgstr "جمع"
+
+#: apps/ledgers/models.py:35
+msgid "Type"
+msgstr "قسم"
+
+#: apps/ledgers/models.py:37
+msgid "Transaction date"
+msgstr "لین دین کی تاریخ"
+
+#: apps/ledgers/models.py:44
+msgid "Ledger Entry"
+msgstr "کھاتہ اندراج"
+
+#: apps/ledgers/models.py:45
+msgid "Ledger Entries"
+msgstr "کھاتہ اندراج"
 
 #: apps/users/admin.py:32
 msgid "Personal info"
