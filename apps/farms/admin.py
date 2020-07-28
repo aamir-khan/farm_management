@@ -76,8 +76,8 @@ class FieldAdmin(ReadOnlyModelAdmin):
 
 
 class CropAdmin(ReadOnlyModelAdmin):
-    list_display = ['id', 'field', 'crop_type', 'season', 'breed', 'total_acres', 'total_expenses', '_total_output',
-                    '_net_profit', '_expense_per_acre', '_output_per_acre', '_net_profit_per_acre', 'date_sowing',
+    list_display = ['field', '_crop', 'total_expenses', '_total_output', '_net_profit', '_expense_per_acre',
+                    '_output_per_acre', '_net_profit_per_acre', 'breed', 'total_acres',  'date_sowing',
                     'date_harvesting']
 
     list_filter = ['field', 'crop_type', 'season', 'date_sowing', ProfitFilter]
@@ -149,6 +149,11 @@ class CropAdmin(ReadOnlyModelAdmin):
         return profit
 
     _net_profit_per_acre.short_description = _('Profit per acre')
+
+    def _crop(self, obj):
+        return f"{obj.crop_type}({obj.get_season_display()})"
+
+    _crop.short_description = _("Crop")
 
 
 class FarmAssetAdmin(ReadOnlyModelAdmin):
