@@ -170,7 +170,7 @@ class FarmAssetAdmin(ReadOnlyModelAdmin):
 
 
 class ExpenseAdmin(ReadOnlyModelAdmin):
-    list_display = ['crop', 'expense_type', 'expense_date', 'amount', 'notes', 'spent_by', 'added_by']
+    list_display = ['crop', '_expense_type', 'amount', 'expense_date', 'notes', 'spent_by', 'added_by']
 
     list_filter = ['crop', 'spent_by', 'expense_type']
 
@@ -182,6 +182,11 @@ class ExpenseAdmin(ReadOnlyModelAdmin):
         if not request.user.is_superuser:
             queryset = queryset.filter(crop__field__farm__owner=request.user)
         return queryset
+
+    def _expense_type(self, obj):
+        return obj.get_expense_type_display()
+
+    _expense_type.short_description = _("Type")
 
 
 class OutputAdmin(ReadOnlyModelAdmin):
