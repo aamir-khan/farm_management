@@ -37,6 +37,11 @@ class ProfitFilter(admin.SimpleListFilter):
             return queryset
 
 
+class ExpenseInlineAdmin(admin.TabularInline):
+    model = Expense
+    extra = 0
+
+
 class FarmAdmin(ReadOnlyModelAdmin):
     list_display = ('name', 'owner')
 
@@ -83,6 +88,8 @@ class CropAdmin(ReadOnlyModelAdmin):
     list_filter = ['field', 'crop_type', 'season', 'date_sowing', ProfitFilter]
 
     ordering = ('-date_sowing', )
+
+    inlines = [ExpenseInlineAdmin]
 
     class Meta:
         model = Crop
