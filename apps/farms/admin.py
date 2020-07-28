@@ -108,13 +108,13 @@ class CropAdmin(ReadOnlyModelAdmin):
     def _total_output(self, obj):
         url = reverse(f'admin:farms_output_changelist')
         url += f'?crop__id__exact={obj.id}'
-        return format_html('<a href="{}" target="_blank">{}</a>', url, obj.total_output)
+        return format_html('<a href="{}">{}</a>', url, obj.total_output)
     _total_output.short_description = _('Total Output')
 
     def total_expenses(self, obj):
         url = reverse(f'admin:farms_expense_changelist')
         url += f'?crop__id__exact={obj.id}'
-        return format_html('<a href="{}" target="_blank">{}</a>', url, obj.total_expense)
+        return format_html('<a href="{}">{}</a>', url, obj.total_expense)
 
     total_expenses.short_description = _("Total Expenses")
 
