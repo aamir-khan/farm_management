@@ -77,6 +77,4 @@ class EmployeeAdmin(ReadOnlyModelAdmin, UserAdmin):
         return form
 
 
-admin.site.unregister(Group)
-
 admin.site.register(User, EmployeeAdmin)
