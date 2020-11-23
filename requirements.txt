@@ -1,5 +1,5 @@
 asgiref==3.2.10
-Django==2.0.13
+Django==2.2.13
 django-modeltranslation==0.15.1
 pytz==2020.1
 six==1.15.0
